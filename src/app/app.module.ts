@@ -6,11 +6,13 @@ import { ResizableModule } from 'angular-resizable-element';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { DragAreaComponent } from './components/drag-area/drag-area.component';
-import { TaskBarComponent } from './components/task-bar/task-bar.component';
+import { DragAreaComponent } from './components/gantt-chart/drag-area/drag-area.component';
+import { TaskBarComponent } from './components/gantt-chart/task-bar/task-bar.component';
+import { DateColumnComponent } from './components/gantt-chart/date-column/date-column.component';
+import { DateColumnHeaderComponent } from './components/gantt-chart/date-column-header/date-column-header.component';
 
 @NgModule({
-  declarations: [AppComponent, DragAreaComponent, TaskBarComponent],
+  declarations: [AppComponent, DragAreaComponent, TaskBarComponent, DateColumnComponent, DateColumnHeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
