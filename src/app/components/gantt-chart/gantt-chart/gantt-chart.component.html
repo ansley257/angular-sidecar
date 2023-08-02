@@ -6,5 +6,21 @@
       [endDate]="endDate"
       [numberOfTasks]="numberOfTasks"
     ></app-gantt-calendar-backdrop>
+    <div
+      class="task-bars-container-spacer"
+      [ngStyle]="{ 'height.px': height }"
+    ></div>
+    <div
+      *ngFor="let task of tasks"
+      class="task-bars-container"
+      [ngStyle]="{ 'height.px': height }"
+    >
+      <app-task-bar
+        *ngIf="startDate && tasks"
+        [task]="task"
+        [ganttFirstDate]="startDate"
+      >
+      </app-task-bar>
+    </div>
   </div>
 </div>
