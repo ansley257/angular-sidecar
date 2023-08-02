@@ -10,9 +10,10 @@ import { DragAreaComponent } from './components/gantt-chart/drag-area/drag-area.
 import { TaskBarComponent } from './components/gantt-chart/task-bar/task-bar.component';
 import { DateColumnComponent } from './components/gantt-chart/date-column/date-column.component';
 import { DateColumnHeaderComponent } from './components/gantt-chart/date-column-header/date-column-header.component';
+import { GanttChartComponent } from './components/gantt-chart/gantt-chart/gantt-chart.component';
 
 @NgModule({
-  declarations: [AppComponent, DragAreaComponent, TaskBarComponent, DateColumnComponent, DateColumnHeaderComponent],
+  declarations: [AppComponent, DragAreaComponent, TaskBarComponent, DateColumnComponent, DateColumnHeaderComponent, GanttChartComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
