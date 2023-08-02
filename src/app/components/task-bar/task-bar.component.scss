@@ -1,0 +1,26 @@
+.task-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  border-radius: 24px;
+  margin: 12px;
+  min-height: 32px;
+  min-width: 48px;
+}
+
+.resize-action-left,
+.resize-action-right {
+  width: 20px;
+  height: 32px;
+  background-color: transparent;
+}
+
+.resize-action-left {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+
+.resize-action-right {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+}

@@ -1,0 +1,16 @@
+<div
+  #taskBar
+  class="task-bar"
+  [style.width.px]="width"
+  [style.transform]="'translate3d(' + taskOffset + 'px, 0px, 0px)'"
+  (window:mouseup)="onMouseUp($event, 0)"
+>
+  <div
+    class="resize-action-left"
+    (mousedown)="onMouseDown($event, 'left')"
+  ></div>
+  <div
+    class="resize-action-right"
+    (mousedown)="onMouseDown($event, 'right')"
+  ></div>
+</div>
