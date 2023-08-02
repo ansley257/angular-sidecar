@@ -17,6 +17,8 @@ export class GanttCalendarBackdropComponent {
   constructor(private taskDatesService: TaskDatesService) {}
 
   ngOnInit(): void {
+    console.log('startDate', this.startDate);
+    console.log('endDate', this.endDate);
     this.datesArray = this.taskDatesService.getDateRangeArray(
       this.startDate,
       this.endDate

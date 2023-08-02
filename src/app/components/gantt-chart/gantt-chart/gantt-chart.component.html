@@ -1,1 +1,10 @@
-<p>gantt-chart works!</p>
+<div class="gantt-chart-window">
+  <div class="gantt-chart-window-content">
+    <app-gantt-calendar-backdrop
+      *ngIf="startDate && endDate && numberOfTasks"
+      [startDate]="startDate"
+      [endDate]="endDate"
+      [numberOfTasks]="numberOfTasks"
+    ></app-gantt-calendar-backdrop>
+  </div>
+</div>

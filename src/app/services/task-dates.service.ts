@@ -41,13 +41,26 @@ export class TaskDatesService {
   getDateRangeArray(startDate: Date, endDate: Date): Date[] {
     const datesArray = [];
     const currentDate = new Date(startDate);
+    const end = new Date(endDate);
     // add 7 days to the start and end dates
-    currentDate.setDate(currentDate.getDate() - 7);
-    endDate.setDate(endDate.getDate() + 7);
-    while (currentDate <= endDate) {
+    currentDate.setDate(currentDate.getDate() - 9);
+    end.setDate(end.getDate() + 9);
+    while (currentDate <= end) {
       datesArray.push(new Date(currentDate));
       currentDate.setDate(currentDate.getDate() + 1);
     }
     return datesArray;
+  }
+
+  getStartDate(tasks: Task[]): Date {
+    return tasks.reduce((minDate, task) => {
+      return task.startDate < minDate ? task.startDate : minDate;
+    }, tasks[0].startDate);
+  }
+
+  getEndDate(tasks: Task[]): Date {
+    return tasks.reduce((maxDate, task) => {
+      return task.endDate > maxDate ? task.endDate : maxDate;
+    }, tasks[0].endDate);
   }
 }

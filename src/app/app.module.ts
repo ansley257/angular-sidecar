@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResizableModule } from 'angular-resizable-element';
 import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { DragAreaComponent } from './components/gantt-chart/drag-area/drag-area.component';
@@ -14,13 +15,22 @@ import { GanttChartComponent } from './components/gantt-chart/gantt-chart/gantt-
 import { GanttCalendarBackdropComponent } from './components/gantt-chart/gantt-calendar-backdrop/gantt-calendar-backdrop.component';
 
 @NgModule({
-  declarations: [AppComponent, DragAreaComponent, TaskBarComponent, DateColumnComponent, DateColumnHeaderComponent, GanttChartComponent, GanttCalendarBackdropComponent],
+  declarations: [
+    AppComponent,
+    DragAreaComponent,
+    TaskBarComponent,
+    DateColumnComponent,
+    DateColumnHeaderComponent,
+    GanttChartComponent,
+    GanttCalendarBackdropComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ResizableModule,
     HttpClientModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
