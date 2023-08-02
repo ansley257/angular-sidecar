@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DayWidthInPx, TaskHeightInPx } from '../../../global-constants';
 
 @Component({
   selector: 'app-date-column',
@@ -9,9 +10,13 @@ export class DateColumnComponent {
   @Input() numberOfTasks!: number;
   @Input() date!: Date;
 
-  public loopingArray: number[];
+  public loopingArray!: number[];
+  public dayWidthInPx: number = DayWidthInPx;
+  public taskHeightInPx: number = TaskHeightInPx;
 
-  constructor() {
+  constructor() {}
+
+  ngOnInit(): void {
     this.loopingArray = Array.from(Array(this.numberOfTasks), (_, i) => i);
   }
 }

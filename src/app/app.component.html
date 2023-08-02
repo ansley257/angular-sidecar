@@ -1,2 +1,6 @@
-<app-date-column [numberOfTasks]="1" [date]="getDate"></app-date-column>
+<app-gantt-calendar-backdrop
+  [startDate]="getDate('2023-08-01')"
+  [endDate]="getDate('2023-08-03')"
+  [numberOfTasks]="4"
+></app-gantt-calendar-backdrop>
 <router-outlet></router-outlet>

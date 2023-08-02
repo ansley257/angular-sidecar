@@ -11,9 +11,10 @@ import { TaskBarComponent } from './components/gantt-chart/task-bar/task-bar.com
 import { DateColumnComponent } from './components/gantt-chart/date-column/date-column.component';
 import { DateColumnHeaderComponent } from './components/gantt-chart/date-column-header/date-column-header.component';
 import { GanttChartComponent } from './components/gantt-chart/gantt-chart/gantt-chart.component';
+import { GanttCalendarBackdropComponent } from './components/gantt-chart/gantt-calendar-backdrop/gantt-calendar-backdrop.component';
 
 @NgModule({
-  declarations: [AppComponent, DragAreaComponent, TaskBarComponent, DateColumnComponent, DateColumnHeaderComponent, GanttChartComponent],
+  declarations: [AppComponent, DragAreaComponent, TaskBarComponent, DateColumnComponent, DateColumnHeaderComponent, GanttChartComponent, GanttCalendarBackdropComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

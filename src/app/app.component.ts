@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'task-bar';
 
-  public get getDate(): Date {
-    return new Date();
+  public getDate(date: string): Date {
+    return new Date(date);
   }
 }

@@ -1,6 +1,10 @@
 <div class="date-column-container">
   <app-date-column-header [date]="date"></app-date-column-header>
   <div class="date-column-cells">
-    <div class="date-column-cell" *ngFor="let cell of loopingArray"></div>
+    <div
+      class="date-column-cell"
+      *ngFor="let cell of loopingArray"
+      [ngStyle]="{ 'width.px': dayWidthInPx, 'height.px': taskHeightInPx }"
+    ></div>
   </div>
 </div>

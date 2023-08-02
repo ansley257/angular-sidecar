@@ -1,0 +1,23 @@
+.gantt-calendar-backdrop {
+  display: flex;
+
+  position: absolute;
+  z-index: 1;
+  width: fit-content;
+  height: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.35),
+      rgba(191, 191, 191, 0.35)
+    ),
+    url("../../../../assets/background.png");
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  &.gantt-calendar-backdrop--visible {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
