@@ -11,7 +11,7 @@ export class DateColumnComponent {
   @Input() date!: Date;
 
   public loopingArray!: number[];
-  public dayWidthInPx: number = DayWidthInPx;
+  public dayWidthInPx: number = DayWidthInPx - 1;
   public taskHeightInPx: number = TaskHeightInPx;
 
   constructor() {}
