@@ -9,6 +9,7 @@ import {
 import { Task } from 'src/app/interfaces/task.model';
 import { TaskDatesService } from 'src/app/services/task-dates.service';
 import { DayWidthInPx } from 'src/app/global-constants';
+import { TasksService } from 'src/app/services/tasks.service';
 
 const enum Status {
   OFF = 0,
@@ -46,7 +47,10 @@ export class TaskBarComponent {
   public width!: number;
   public taskOffset!: number;
 
-  constructor(private taskDatesService: TaskDatesService) {
+  constructor(
+    private taskDatesService: TaskDatesService,
+    private tasksService: TasksService
+  ) {
     this.status = Status.OFF;
     this.side = Side.NONE;
   }
@@ -77,7 +81,10 @@ export class TaskBarComponent {
   }
 
   onMouseUp(event: MouseEvent, status: Status): void {
-    if (this.status === 1) event?.stopPropagation();
+    if (this.status === 1) {
+      event?.stopPropagation();
+      this.tasksService.updateTask(this.task);
+    }
     this.status = status;
   }
 
