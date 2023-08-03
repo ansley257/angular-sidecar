@@ -1,0 +1,29 @@
+.date-column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  border-right: 1px solid #dcacbc;
+  background-color: transparent;
+  .date-column-cells {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    .date-column-cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #b38394;
+      background-color: transparent;
+
+      &:hover {
+        background-color: #0088ff;
+      }
+    }
+  }
+}

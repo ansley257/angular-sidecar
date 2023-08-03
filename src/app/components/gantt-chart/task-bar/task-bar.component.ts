@@ -8,7 +8,7 @@ import {
 
 import { Task } from 'src/app/interfaces/task.model';
 import { TaskDatesService } from 'src/app/services/task-dates.service';
-import { DayWidthInPx } from 'src/app/global-constants';
+import { DayWidthInPx, TaskHeightInPx } from 'src/app/global-constants';
 import { TasksService } from 'src/app/services/tasks.service';
 
 const enum Status {
@@ -46,6 +46,8 @@ export class TaskBarComponent {
 
   public width!: number;
   public taskOffset!: number;
+  public taskMinWidth: number = DayWidthInPx;
+  public taskMinHeight: number = TaskHeightInPx - 16;
 
   constructor(
     private taskDatesService: TaskDatesService,

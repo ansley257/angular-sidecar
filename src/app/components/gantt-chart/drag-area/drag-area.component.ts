@@ -10,7 +10,7 @@ import { TasksService } from 'src/app/services/tasks.service';
 })
 export class DragAreaComponent {
   public task!: Task;
-  public ganttFirstDate: Date = new Date(2023, 7, 28);
+  public ganttFirstDate: Date = new Date();
 
   constructor(private tasksService: TasksService) {}
 

@@ -25,4 +25,8 @@ export class TasksService {
 
     return this.http.put<Task>(this.url, task, httpOptions);
   }
+
+  public getNumberOfTasks(tasks: Task[]): number {
+    return tasks.length;
+  }
 }
