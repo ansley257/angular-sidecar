@@ -5,7 +5,7 @@
   align-items: center;
   width: fit-content;
   height: fit-content;
-  border-right: 1px solid #e0e0e0;
+  border-right: 1px solid #dcacbc;
   background-color: transparent;
   .date-column-cells {
     display: flex;
@@ -18,8 +18,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border-bottom: 1px solid #e0e0e0;
-      background-color: #f8f8f8;
+      border-bottom: 1px solid #b38394;
+      background-color: transparent;
 
       &:hover {
         background-color: #0088ff;

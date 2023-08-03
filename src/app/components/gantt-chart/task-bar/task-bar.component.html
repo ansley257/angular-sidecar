@@ -5,6 +5,7 @@
   [style.transform]="'translate3d(' + taskOffset + 'px, 0px, 0px)'"
   [style.minWidth.px]="taskMinWidth"
   [style.minHeight.px]="taskMinHeight"
+  [style.pointerEvents]="'auto'"
   (window:mouseup)="onMouseUp($event, 0)"
 >
   <div

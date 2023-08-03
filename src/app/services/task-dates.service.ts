@@ -14,7 +14,7 @@ export class TaskDatesService {
     const end = endDate.getTime();
     const total = end - start;
     const days = total / (1000 * 60 * 60 * 24);
-    const width = days * DayWidthInPx;
+    const width = days * DayWidthInPx - DayWidthInPx / 2;
     return width;
   }
 
@@ -28,7 +28,7 @@ export class TaskDatesService {
     const first = ganttFirstDate.getTime();
     const total = start - first;
     const days = total / (1000 * 60 * 60 * 24);
-    const offset = days * DayWidthInPx;
+    const offset = days * DayWidthInPx + DayWidthInPx / 4 + DayWidthInPx * 9;
     return offset;
   }
 

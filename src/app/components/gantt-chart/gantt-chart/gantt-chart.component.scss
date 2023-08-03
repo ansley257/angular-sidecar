@@ -11,7 +11,7 @@ app-gantt-calendar-backdrop {
   width: 1250px;
   height: 600px;
   overflow: scroll;
-  border: 1px solid #ddd;
+  border: 1px solid #161616;
   border-radius: 8px;
 
   &::after {
@@ -23,7 +23,9 @@ app-gantt-calendar-backdrop {
     left: 0;
     z-index: 3;
     box-shadow: inset 2px 2px 4px 4px rgba(0, 0, 0, 0.05),
-      inset -2px -2px 4px 4px rgba(0, 0, 0, 0.05);
+      inset -2px -2px 4px 4px rgba(0, 0, 0, 0.05),
+      2px 2px 4px 4px rgba(255, 255, 255, 0.05),
+      -2px -2px 4px 4px rgba(255, 255, 255, 0.05);
     pointer-events: none; // this makes the pseudo-element unclickable, allowing clicks to pass through to the actual element
   }
 
