@@ -6,9 +6,10 @@ import { ResizableModule } from 'angular-resizable-element';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { DragAreaComponent } from './components/gantt-chart/drag-area/drag-area.component';
@@ -38,9 +39,10 @@ import { GanttTaskDrawerComponent } from './components/gantt-chart/gantt-task-dr
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
-    FormsModule,
+    ReactiveFormsModule,
     MatCheckboxModule,
     MatSidenavModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

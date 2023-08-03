@@ -9,7 +9,5 @@ export class GanttTaskDrawerComponent {
   events: string[] = [];
   opened: boolean = false;
 
-  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(
-    window.location.host
-  );
+  shouldRun = true;
 }

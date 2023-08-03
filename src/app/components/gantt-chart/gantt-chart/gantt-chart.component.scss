@@ -1,11 +1,12 @@
-app-task-bar {
+.task-bar {
   width: fit-content;
   height: fit-content;
 }
 
-app-gantt-calendar-backdrop {
-  z-index: 1;
+.gantt-calendar-backdrop {
+  // z-index: 1;
 }
+
 .gantt-chart-window {
   position: relative;
   width: 1250px;
@@ -21,7 +22,7 @@ app-gantt-calendar-backdrop {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
     box-shadow: inset 2px 2px 4px 4px rgba(0, 0, 0, 0.05),
       inset -2px -2px 4px 4px rgba(0, 0, 0, 0.05),
       2px 2px 4px 4px rgba(255, 255, 255, 0.05),
@@ -43,8 +44,13 @@ app-gantt-calendar-backdrop {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  z-index: 2;
+  // z-index: 2;
   position: relative;
   pointer-events: none;
   height: fit-content;
+}
+
+.gtd {
+  // z-index: 3;
+  // position: absolute;
 }
