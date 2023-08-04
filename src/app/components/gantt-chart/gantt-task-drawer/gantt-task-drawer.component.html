@@ -1,0 +1,24 @@
+<mat-sidenav-container class="gtd-container" *ngIf="shouldRun">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [(opened)]="opened"
+    (opened)="events.push('open!')"
+    (closed)="events.push('close!')"
+  >
+    Sidenav content
+  </mat-sidenav>
+
+  <mat-sidenav-content class="gtd-content">
+    <div class="gtd-btn-container">
+      <button
+        class="gtd-btn"
+        mat-mini-fab
+        color="primary"
+        aria-label="Example icon button with a menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

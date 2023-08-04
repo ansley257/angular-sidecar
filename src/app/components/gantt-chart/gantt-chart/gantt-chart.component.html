@@ -1,0 +1,29 @@
+<div class="gantt-chart-window">
+  <div class="gantt-chart-window-content">
+    <app-gantt-calendar-backdrop
+      class="gantt-calendar-backdrop"
+      *ngIf="startDate && endDate && numberOfTasks"
+      [startDate]="startDate"
+      [endDate]="endDate"
+      [numberOfTasks]="numberOfTasks"
+    ></app-gantt-calendar-backdrop>
+    <div
+      class="task-bars-container-spacer"
+      [ngStyle]="{ 'height.px': height }"
+    ></div>
+    <div
+      *ngFor="let task of tasks"
+      class="task-bars-container"
+      [ngStyle]="{ 'height.px': height }"
+    >
+      <app-task-bar
+        class="task-bar"
+        *ngIf="startDate && tasks"
+        [task]="task"
+        [ganttFirstDate]="startDate"
+      >
+      </app-task-bar>
+    </div>
+    <app-gantt-task-drawer class="gtd"></app-gantt-task-drawer>
+  </div>
+</div>
